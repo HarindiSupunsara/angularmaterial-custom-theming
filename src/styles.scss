@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+@import './assets/styles/app-color-palette.scss';
+// @import './assets/styles/app-typography.scss';
+@include mat-core();
+$app-primary: mat-palette($mat-indigo);
+$app-accent: mat-palette($mat-pink, 300, 100, 900);
+$app-warn: mat-palette($mat-red);
+$success: rgb(48, 143, 48);
+$theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+$custom-typography: mat-typography-config( $font-family: 'sans-serif', $title: mat-typography-level(14px, 12px, bold), $headline: mat-typography-level(30px, 35px, 400), $body-1: mat-typography-level(16px, 24px, 500));
+@include mat-core($custom-typography);
+@include angular-material-theme($theme);

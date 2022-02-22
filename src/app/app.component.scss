@@ -1,0 +1,67 @@
+@import '../app/app.component.scss-theme.scss';
+@import '../assets/styles/app-color-palette.scss';
+:host {
+    // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    //font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    color: white;
+    @include display-flex(center);
+    @include header($primary-header, 100%, 70px);
+}
+
+.content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    @include margin(0px, 0px, 0px, 10px);
+}
+
+.display-flex {
+    @include display-flex(center);
+}
+
+section {
+    display: table;
+}
+
+.example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+}
+
+h1 {
+    @include margin(0px, 0px, 0px, 0px);
+}
+
+.main-card {
+    @include margin(10px, 0px, 0px, 0px);
+}
